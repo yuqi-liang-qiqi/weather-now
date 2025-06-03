@@ -29,7 +29,6 @@ function App() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center py-10 px-4">
-            <h1 className="text-5xl text-red-600 font-extrabold">🔥 Tailwind 是否加载成功？</h1>
             <h1 className="text-3xl font-bold mb-6">🌤️ Weather Now</h1>
             <div className="flex gap-2 mb-6">
                 <input
