@@ -187,6 +187,6 @@ npm run build
 
 欢迎提交 Issue 和 Pull Request 来帮助改进项目。这也是一个很好的学习机会！
 
-## �� 许可
+## 📖 许可
 
 MIT License 
