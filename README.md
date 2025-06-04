@@ -1,8 +1,8 @@
-# Weather Now 天气预报应用
-
 <p align="center">
   <img src="public/images/logo.svg" alt="Weather Now Logo" width="600" />
 </p>
+
+# Weather Now 天气预报应用
 
 > 🎓 **教学项目说明**
 > 
