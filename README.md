@@ -1,5 +1,9 @@
 # Weather Now 天气预报应用
 
+<p align="center">
+  <img src="public/images/logo.svg" alt="Weather Now Logo" width="600" />
+</p>
+
 > 🎓 **教学项目说明**
 > 
 > 这是一个软件工程基础教学项目，旨在帮助学习者从零开始理解现代 Web 开发流程。
@@ -183,6 +187,6 @@ npm run build
 
 欢迎提交 Issue 和 Pull Request 来帮助改进项目。这也是一个很好的学习机会！
 
-## 📄 许可
+## �� 许可
 
 MIT License 
