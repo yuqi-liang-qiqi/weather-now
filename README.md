@@ -1,6 +1,39 @@
 # Weather Now 天气预报应用
 
-一个简洁优雅的天气预报应用，支持全球城市天气查询，提供未来三天的天气预报信息。
+> 🎓 **教学项目说明**
+> 
+> 这是一个软件工程基础教学项目，旨在帮助学习者从零开始理解现代 Web 开发流程。
+> 
+> - 本项目展示了如何构建一个基础但完整的 Web 应用
+> - 涵盖了前端开发、API 调用、UI/UX 设计等核心概念
+> - 融合了 AI 驱动开发的现代方法论
+> - 作为入门项目，为学习更复杂的应用开发打下基础
+> 
+> 完整的教学系列项目请访问我的 GitHub 主页查看更多进阶版本。
+
+## 🎯 学习要点
+
+1. **基础知识**
+   - React 组件开发
+   - 现代 CSS 框架使用
+   - API 调用和错误处理
+   - 响应式设计实现
+
+2. **进阶技能**
+   - 状态管理
+   - 组件复用
+   - UI/UX 设计原则
+   - 性能优化
+
+3. **工程实践**
+   - 项目结构组织
+   - 代码规范
+   - 文档编写
+   - Git 版本控制
+
+## 📑 相关产品需求文档
+
+- [产品需求文档(PRD)](./docs/PRD.md)
 
 ## 🌟 特性
 
@@ -69,6 +102,8 @@ weather-now/
 │   │   └── WeatherCard.jsx    # 天气卡片组件
 │   ├── App.jsx               # 主应用组件
 │   └── index.css            # 全局样式
+├── docs/                    # 项目文档
+│   └── PRD.md              # 产品需求文档
 ├── public/                  # 静态资源
 ├── index.html              # HTML 模板
 ├── package.json            # 项目配置
@@ -81,7 +116,7 @@ weather-now/
 
 1. 克隆项目
 ```bash
-git clone [您的仓库地址]
+git clone https://github.com/yuqi-liang-qiqi/weather-now
 ```
 
 2. 安装依赖
@@ -90,10 +125,12 @@ npm install
 ```
 
 3. 创建环境变量文件
-创建 `.env` 文件并添加您的 OpenWeather API Key：
+创建 `.env` 文件并添加你的 OpenWeather API Key：
 ```
-VITE_OPENWEATHER_API_KEY=您的API密钥
+VITE_OPENWEATHER_API_KEY=你的API密钥
 ```
+
+具体的API密钥信息，请见调用的第三方网站平台 [Open Weather Map](https://openweathermap.org/forecast5).
 
 4. 启动开发服务器
 ```bash
@@ -141,7 +178,7 @@ npm run build
 
 ## 🤝 贡献
 
-欢迎提交 Issue 和 Pull Request 来帮助改进项目。
+欢迎提交 Issue 和 Pull Request 来帮助改进项目。这也是一个很好的学习机会！
 
 ## 📄 许可
 
