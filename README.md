@@ -210,10 +210,3 @@ npm run build
    - 免费版 API 有调用频率限制
    - 建议合理控制请求频率
 
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request 来帮助改进项目。这也是一个很好的学习机会！
-
-## �� 许可
-
-MIT License 
