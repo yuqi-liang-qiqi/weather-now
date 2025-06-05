@@ -14,16 +14,37 @@ function App() {
 
     const fetchWeather = async () => {
         if (!city) return;
+        
+        const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+        
+        // Check if API key is configured
+        if (!API_KEY || API_KEY === 'your_api_key_here') {
+            setError(
+                '请配置 OpenWeather API Key。\n' +
+                '1. 在项目根目录创建 .env 文件\n' +
+                '2. 添加 VITE_OPENWEATHER_API_KEY=你的API密钥\n' +
+                '详细说明请查看 README.md'
+            );
+            return;
+        }
+
         try {
             setError(null);
             setWeatherData(null);
-            const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
             const res = await axios.get(
                 `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}&lang=en`
             );
             setWeatherData(res.data);
         } catch (err) {
-            setError('City not found. Please try again.');
+            if (err.response?.status === 401) {
+                setError('API Key 无效。请确保你的 OpenWeather API Key 配置正确，并且已经激活。');
+            } else if (err.response?.status === 404) {
+                setError('未找到该城市。请使用英文输入城市名称（如：Beijing, Shanghai）');
+            } else if (err.response?.status === 429) {
+                setError('API 调用次数超限。请稍后再试或检查你的 API 使用配额。');
+            } else {
+                setError('获取天气信息失败。请检查网络连接后重试。');
+            }
         }
     }
 
@@ -54,7 +75,7 @@ function App() {
                         placeholder="Enter city name"
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
-                        onKeyPress={handleKeyPress}
+                        onKeyPress={(e) => e.key === 'Enter' && fetchWeather()}
                         className="flex-1 border border-gray-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-200"
                     />
                     <button
@@ -68,7 +89,7 @@ function App() {
 
             {error && (
                 <div className="w-full max-w-md bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                    <p className="text-red-600 text-center">{error}</p>
+                    <p className="text-red-600 whitespace-pre-line text-center">{error}</p>
                 </div>
             )}
             
